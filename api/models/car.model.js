@@ -18,11 +18,11 @@ const carSchema = new Schema({
     required: 'The year of manufacture is required'
   },
   fuelType: {
-    type: [Gas, Diesel, Electric],
+    type: ["Gas", "Diesel", "Hybrid"],
     required: 'Select a fuel type'
   },
   transmission: {
-    type: [Manual, Automatic],
+    type: ["Manual", "Automatic"],
     required: 'Select a type of transmission'
   },
   horsePower: {
@@ -30,7 +30,7 @@ const carSchema = new Schema({
     required: 'Horse Power is required'
   },
   image: {
-    type: String,
+    type: [String],
     required: 'Car image is required'
   },
   kilometers: {

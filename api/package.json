@@ -1,11 +1,11 @@
 {
-  "name": "api",
+  "name": "iron-runcar",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "App.js",
   "scripts": {
     "start": "node app.js",
-    "dev": "DEBUG=events-api:* nodemon app.js"
+    "dev": "nodemon app.js"
   },
   "author": "",
   "license": "ISC",
@@ -21,5 +21,13 @@
   },
   "devDependencies": {
     "nodemon": "^2.0.15"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/iron-runcar/iron-runcar.git"
+  },
+  "bugs": {
+    "url": "https://github.com/iron-runcar/iron-runcar/issues"
+  },
+  "homepage": "https://github.com/iron-runcar/iron-runcar#readme"
 }
