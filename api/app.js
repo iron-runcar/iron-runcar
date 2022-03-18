@@ -34,7 +34,7 @@ app.use(logger("dev"));
 
 const { session, loadUser } = require("./config/session.config");
 app.use(session);
-//app.use(loadUser);
+app.use(loadUser);
 
 const routes = require("./config/routes.config");
 app.use("/api", routes);
