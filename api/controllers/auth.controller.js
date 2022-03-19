@@ -48,7 +48,9 @@ module.exports.login = (req, res, next) => {
 }
 
 module.exports.profile = (req, res, next) => {
-  res.json(req.user);
+  User.findById(req.user.id)
+    .then(user => res.status(200).json(user))
+    .catch(error => next(error));
 }
 
 module.exports.logout = (req, res, next) => {

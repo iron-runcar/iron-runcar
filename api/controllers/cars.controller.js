@@ -9,7 +9,7 @@ module.exports.list = (req, res, next) => {
 
 module.exports.create = (req,res, next) => {
   const car = req.body;
-
+  car.ownerId = req.user.id;
   Car.create(car)
     .then(car => res.status(201).json(car))
     .catch((error) => next(error));
