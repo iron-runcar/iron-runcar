@@ -3,16 +3,16 @@ const Booking = require('../models/booking.model');
 const Car = require('../models/car.model');
 const moment = require('moment');
 
-module.exports.findCar = (req, res, next) => {
-  
-};
 
 module.exports.create = (req, res, next) => {
 
   Car.findById(req.params.carId)
+    
     .then(car => {
       if (!car) {
         next(createError(404, `Car ${req.params.carId} not found`));
+      } else if (car.ownerId = req.user.id){
+        next(createError(403, `Car ${req.params.carId} is booked`))
       } else {
         const permanence = req.body.permanence;
         const booking = {
@@ -30,8 +30,13 @@ module.exports.create = (req, res, next) => {
     })
     .catch(error => next(error));
 
+};
 
-
-}
-
+module.exports.list = (req, res, next) => {
+  Booking.find()
+    .populate('owner')
+    .populate('car')
+    .then(booking => res.json(booking))
+    .catch((error) => next(error));
+};
 

@@ -29,7 +29,17 @@ const bookingSchema = new Schema({
   endDate: {
     type: Date,
     required: 'end booking date is required'
-  },
+  }
+}, {
+  timestamps: true,
+  toJSON: {
+    transform: (doc, booking) => {
+      booking.id = doc._id;
+      delete booking.__v;
+      delete booking._id;
+      return booking;
+    }
+  }
 
 });
 

@@ -3,7 +3,8 @@ const Car = require("../models/car.model");
 
 module.exports.list = (req, res, next) => {
   Car.find()
-    .then(cars => res.json(cars))
+    .then(
+      cars => res.json(cars))
     .catch((error) => next(error));
 };
 
