@@ -1,31 +1,34 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
-const Car = require("../models/car.model");
 
 const bookingSchema = new Schema({
 
   owner: {
     type: mongoose.Types.ObjectId,
-    ref: 'User'
+    ref: 'User',
+    required: 'owner is required'
   },
   car: {
     type: mongoose.Types.ObjectId,
-    ref: 'Car'
+    ref: 'Car',
+    required: 'car is required'
   },
   permanence: {
     type: String,
-    enum: ["Sin permanencia", "3 meses", "6 meses", "12 meses", "24 meses", "36 meses"]
+    enum: ["0", "3", "6", "12", "24", "36"],
+    required: 'permanence is required'
   },
   price: {
-    type: Number
+    type: Number,
+    required: 'price is required'
   },
   startDate: {
     type: Date,
-    required: 'Booking date is required'
+    required: ' start booking date is required'
   },
   endDate: {
     type: Date,
-    required: 'Booking date is required'
+    required: 'end booking date is required'
   },
 
 });
