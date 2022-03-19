@@ -39,16 +39,12 @@ const carSchema = new Schema({
     type: Number,
     required: 'Car kilometers is required'
   },
-  permanence: {
-    type: [String],
-    required: 'The permanence is required'
-  },
   prices: {
     type: [{
       _id: false,
       permanence: {
         type: String,
-        enum: ["Sin permanencia", "3 meses", "6 meses", "12 meses", "24 meses", "36 meses"]
+        enum: ["0", "3", "6", "12", "24", "36"]
       },
       price: Number
     }],

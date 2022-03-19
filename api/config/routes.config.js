@@ -9,6 +9,7 @@ const auth = require("../controllers/auth.controller");
 router.get("/cars", cars.list);
 router.post("/cars", secure.isAuthenticated, cars.create);
 router.get("/cars/:id", cars.detail);
+router.post("/cars/:carId/booking", secure.isAuthenticated, booking.create);
 
 router.post("/register", auth.register);
 router.post("/login", auth.login);
