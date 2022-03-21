@@ -4,6 +4,7 @@ import './footer.css';
 import { FiTwitter } from "react-icons/fa";
 import { BsFillEmojiSmileFill } from "react-icons/bs";
 
+
 function Footer() {
   return(
    
@@ -20,14 +21,14 @@ function Footer() {
             </div>
           </div>
           <div className="col-md-8 text-md-end">
-            <ul className="list-unstyled social-icons">
+           {/*  <ul className="list-unstyled social-icons">
               <li><Link to="#" className="fb"><span className="BsFillEmojiSmileFill"></span></Link></li>
               <li><Link to="#" className="tw"><span className="FiTwitter"></span></Link></li>
               <li><Link to="#" className="in"><span className="icon-instagram"></span></Link></li>
               <li><Link to="#" className="be"><span className="icon-behance"></span></Link></li>
               <li><Link to="#" className="dr"><span className="icon-dribbble"></span></Link></li>
               <li><Link to="#" className="yt"><span className="icon-play"></span></Link></li>
-            </ul>
+            </ul> */}
           </div>
         </div>
 

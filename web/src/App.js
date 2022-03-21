@@ -9,14 +9,15 @@ function App() {
   return (
     <div className="App">
       <NavBar />
-      <Routes>
-      
-      <Route path="/cars" element={<CarList/>}/>
-      <Route path="/cars/:id" element={<CarDetail/>}/>
+      <div className="container py-5">
+        <Routes>  
+          <Route path="/cars" element={<CarList/>}/>
+          <Route path="/cars/:id" element={<CarDetail/>}/>
      
-      </Routes>
+        </Routes>
+      </div>
         <Footer />  
-      
+        
     </div>
   );
 }
