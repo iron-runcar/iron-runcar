@@ -17,7 +17,7 @@ function Footer() {
         <div className="row mb-5">
           <div className="col-md-4">
             <div className="site-logo">
-              <Link to="#">lo͝okər</Link>
+              <Link to="#">lo͝okər <i className="fa fa-home"></i></Link>
             </div>
           </div>
           <div className="col-md-8 text-md-end">

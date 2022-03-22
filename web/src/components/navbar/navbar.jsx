@@ -1,27 +1,36 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import './navbar.css';
 
 function NavBar() {
-
-  return(
-    <div className="container-header">
-      <header className="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 mx-4 border-bottom">
-        <Link to="/" className="d-flex align-items-center col-md-3 mb-2 mb-md-0 text-dark text-decoration-none">lo͝okər</Link>
-
-        <ul className="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
-          <li><Link to="/cars" className="nav-link px-4 link-dark">Ver flota</Link></li>
-          <li><Link to="#" className="nav-link px-4 link-dark">Como funciona</Link></li>
-        </ul>
-
-        <div className="col-md-3 text-end">
-          <button type="button" className="btn me-2">¿Hablamos?</button>
-          <button type="button" className="btn rounded-pill btn-outline-success me-2">Entra</button>
-          
+  return (
+    <nav className="navbar navbar-expand-lg navbar-light bg-light">
+      <div className="container">
+        <NavLink className="navbar-brand" to="/">lo͝okər</NavLink>
+        <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main-nav" aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
+          <span className="navbar-toggler-icon"></span>
+        </button>
+        <div className="collapse navbar-collapse" id="main-nav">
+          <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+            <li className="nav-item">
+              <NavLink className="nav-link active" aria-current="page" to="/cars">Ver flota</NavLink>
+            </li>
+            <li className="nav-item">
+              <NavLink className="nav-link"to="/faqs">Como funciona</NavLink>
+            </li>
+          </ul>
+          <ul className="navbar-nav">
+            <li className="nav-item">
+              <NavLink className="nav-link active" aria-current="page" to="/contact">¿Hablamos?</NavLink>
+            </li>
+            <li className="nav-item">
+              <NavLink className="nav-link btn rounded-pill btn-outline-success"to="/login">Login</NavLink>
+            </li>
+          </ul>
         </div>
-      </header>
-    </div>
-  );
+      </div>
+    </nav>
+  )
 }
 
 export default NavBar;
