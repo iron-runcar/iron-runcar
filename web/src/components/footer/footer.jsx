@@ -1,15 +1,30 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import './footer.css';
-import { FiTwitter } from "react-icons/fa";
-import { BsFillEmojiSmileFill } from "react-icons/bs";
 
 
 function Footer() {
+  
   return(
+    <footer className="bg-light p-2 position-fixed w-100 bottom-0">
+      <div className="container">
+        <Link className="navbar-brand" to="/">lo͝okər</Link>
+      </div>
+      <div className="col-md-8 text-md-end d-inline">
+        <ul className="container socialLinks d-flex flex-row-reverse">
+          <li><Link to="#"><span><i className="fa fa-facebook-f"></i></span></Link></li>
+          <li><Link to="#"><span><i className="fa fa-twitter"></i></span></Link></li>
+          <li><Link to="#"><span><i className="fa fa-instagram"></i></span></Link></li>
+        </ul>
+      </div>
+    </footer>
+  )
+  
+  
+  /* return(
    
   
-  <footer className="footer-59391 position-absolute w-100 bottom-0">
+  <footer className="footer-59391 position-fixed w-100 bottom-0">
     
       <div className="container">
 
@@ -21,14 +36,11 @@ function Footer() {
             </div>
           </div>
           <div className="col-md-8 text-md-end">
-           {/*  <ul className="list-unstyled social-icons">
-              <li><Link to="#" className="fb"><span className="BsFillEmojiSmileFill"></span></Link></li>
-              <li><Link to="#" className="tw"><span className="FiTwitter"></span></Link></li>
-              <li><Link to="#" className="in"><span className="icon-instagram"></span></Link></li>
-              <li><Link to="#" className="be"><span className="icon-behance"></span></Link></li>
-              <li><Link to="#" className="dr"><span className="icon-dribbble"></span></Link></li>
-              <li><Link to="#" className="yt"><span className="icon-play"></span></Link></li>
-            </ul> */}
+            <ul className="list-unstyled social-icons">
+              <li><Link to="#"><span><i className="fa-brands fa-facebook-f"></i></span></Link></li>
+              <li><Link to="#"><span><i className="fa-brands fa-twitter"></i></span></Link></li>
+              <li><Link to="#"><span><i className="fa-brands fa-instagram"></i></span></Link></li>
+            </ul>
           </div>
         </div>
 
@@ -54,7 +66,7 @@ function Footer() {
 
 
    
-  );
+  ); */
 }
 
 export default Footer;
