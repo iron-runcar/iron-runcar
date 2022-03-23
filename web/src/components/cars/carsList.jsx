@@ -1,4 +1,4 @@
-
+import { Link } from 'react-router-dom';
 import React, { useEffect, useState } from "react";
 import { getCars } from "../../services/api-service";
 import CarItem from "./CarItem";
@@ -18,15 +18,16 @@ function CarList() {
 
     if (!cars) return <> </>
 
-    return ( 
-    <div>
+    return (
+        <Link className='detail d-flex text-decoration-none' to="/cars/:id">
+            <div className="d-flex">
 
-        
-        {cars.map((car) => 
-            <CarItem {...car} key={car.id} />
-        )}
+                {cars.map((car) =>
+                    <CarItem {...car} key={car.id} />
+                )}
 
-    </div>
+            </div>
+        </Link>
     );
 }
 
