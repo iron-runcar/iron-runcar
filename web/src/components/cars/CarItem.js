@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 
 
-function CarItem({ brand, prices, image, model }) {
+function CarItem({ brand, prices, image, model, id }) {
     console.log(prices)
     const price = prices[prices.length - 1]?.price
     const permanence = prices.map((pricesWithPermanence)=> {
@@ -25,7 +25,7 @@ function CarItem({ brand, prices, image, model }) {
                     <div><span className="card-notify-badge  me-auto font-weight-bold">{brand}</span></div>
                     <div><span className="card-notify-price  me-auto">Desde {price}€</span></div>
                     </div>
-                    <Link className='detail d-flex' to="/cars/:id">
+                    <Link className='detail d-flex' to={`/cars/${id}`}>
                     <img className="img-fluid" src={image[0]} alt={brand} />
                     </Link>
                 
