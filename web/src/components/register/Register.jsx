@@ -1,6 +1,5 @@
 import React from "react";
 import './register.css';
-import { useNavigate } from "react-router";
 import { AlertContext } from "../../contexts/alert-context";
 import { register } from "../../services/api-service";
 
@@ -11,7 +10,6 @@ function Register() {
         password: "",
     });
 
-    const navigate = useNavigate();
     const [error, setError] = React.useState();
     const { showAlert } = React.useContext(AlertContext);
 
@@ -32,17 +30,19 @@ function Register() {
         register(data)
           .then((response) => {
             showAlert("successfully registered");
-       navigate("/login");
+            
           })
-                  .catch((error) => {
-                setError(error.response.data.message);
+            .catch((error) => {
+            setError(error.response.data.message);
       });
+
+    }
             
 
      return (
          <div>         
             {error && <div className="alert alert-danger">{error}</div>}
-                <form onSubmit={handleSubmit}>   
+                <form onSubmit= {handleSubmit}>   
             
                     <div className="m-auto col-4 mb-4">
                             <label for="name" className="form-label d-flex justify-content-center">
@@ -84,16 +84,14 @@ function Register() {
                 </div>
 
                 <button type="submit" className="btn btn-primary">
-          Register
-        </button>
+                Register
+                </button>
                 
             </form>
             
             <div className="col-4"><img src= "https://cardive.app/images/register.webp" alt="" className="img" /></div>
             
         </div>
-
-
     );
 }
 
