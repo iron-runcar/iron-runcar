@@ -10,21 +10,21 @@ const ADMIN_EMAIL = process.env.ADMIN_EMAIL;
 const userSchema = new Schema({
   name: {
     type: String,
-    required: 'User name is required',
-    minlength: [3, 'User name deeds at least 3 chars']
+    required: '¡Oh! necesitamos tu nombre',
+    minlength: [3, 'Por favor, ingresa un nombre de más de 3 letras']
   },
   email: {
     type: String,
-    required: 'User email is required',
+    required: '¡Oh! necesitamos tu email',
     trim: true,
     unique: true,
     lowercase: true,
-    match: [EMAIL_REGEX, 'Invalid email pattern']
+    match: [EMAIL_REGEX, 'email inválido, ¡Revísalo!']
   },
   password: {
     type: String,
-    required: 'User password is required',
-    match: [PASSWORD_REGEX, 'Password needs at least 6 chars']
+    required: '¡Oh! necesitamos tu password, ¿lo recuerdas?',
+    match: [PASSWORD_REGEX, 'El password debe tener más de 6 caracteres']
   },
   role: {
     type: String,
