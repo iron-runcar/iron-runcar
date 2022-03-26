@@ -16,3 +16,7 @@ export function getCarDetail(id) {
 export function register(user) {
     return http.post("/api/register", user);
   }
+
+export function login(user) {
+    return http.post("/api/login", user);
+}
