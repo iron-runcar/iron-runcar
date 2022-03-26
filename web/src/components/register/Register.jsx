@@ -29,34 +29,35 @@ function Register() {
 
         register(data)
             .then((response) => {
-                showAlert("successfully registered");
+                showAlert("Bienvenido Looker");
 
             })
             .catch((error) => {
                 setError(error.response.data.message);
-            });
+            })
 
     }
 
 
     return (
         <>
-            {error && <div className="alert alert-danger">{error}</div>}
+            {error && <div className="alert alert-danger col-4 m-auto">{error}</div>}
             <form className="register-form" onSubmit={handleSubmit}>
                 <img src="https://cardive.app/images/register.webp" alt="" className="form-bg" />
 
 
                 <div className="m-auto col-4 mb-4">
-                    <label htmlFor="name" className="form-label d-flex justify-content-center">
+                    <label htmlFor="name" className="form-label d-flex justify-content-center ">
                         Name
                     </label>
                     <input
                         type="text"
-                        className="form-control"
+                        className={`form-control justify-content-center ${error?.name ? "is-invalid" : ""} `}
                         id="name"
                         value={data.name}
                         onChange={handleChange}
                     />
+                     <div class="invalid-feedback">{ error?.name }</div>
                 </div>
 
                 <div className="m-auto col-4 mb-4">
@@ -64,8 +65,8 @@ function Register() {
                         Email
                     </label>
                     <input
-                        type="text"
-                        className="form-control"
+                        type="email"
+                        className={`form-control justify-content-center ${error?.email ? "is-invalid" : ""} `}
                         id="email"
                         value={data.email}
                         onChange={handleChange}
@@ -77,8 +78,8 @@ function Register() {
                         Password
                     </label>
                     <input
-                        type="text"
-                        className="form-control"
+                        type="password"
+                        className={`form-control justify-content-center ${error?.password ? "is-invalid" : ""} `}
                         id="password"
                         value={data.password}
                         onChange={handleChange}
@@ -86,7 +87,7 @@ function Register() {
                 </div>
                 <div className="m-auto col-4 mt-2">
                     <div className="d-grid">
-                        <button type="submit" className="btn btn-primary">Register</button>
+                        <button type="submit" className="btn btn-primary">Registro</button>
                     </div>
                 </div>
             </form>

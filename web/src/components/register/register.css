@@ -1,19 +1,13 @@
 .form-control {
     border: none;
-
-  background: 
-    repeating-linear-gradient(90deg, 
-        rgb(37, 87, 48) 0, 
-        dimgrey 1ch, 
-        transparent 0, 
-        transparent 1.5ch) 
-      0 100%/100% 2px no-repeat;
-  color: rgb(55, 117, 76);
+    border-bottom: 1px solid rgb(27, 107, 34);
+    border-radius: 0;
 }
 
-
+  
 .register-form {
   position: relative;
+  background-color:transparent;
 }
 
 .register-form .form-bg {
@@ -23,4 +17,12 @@
   bottom: 0;
   right: 300px;
   z-index: -1;
+}
+
+.form-control:focus {
+  color: #212529;
+  background-color: #fff;
+  border-color: #86b7fe;
+  outline: 0;
+  box-shadow: none;
 }

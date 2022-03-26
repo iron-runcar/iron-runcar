@@ -36,8 +36,8 @@ function Login() {
                 handleLogin(response.data);
                 navigate("/");
             })
-            .catch((err) => {
-                setError(err.response.data.message);
+            .catch((error) => {
+                setError(error.response.data.message);
             })
     }
 
@@ -48,6 +48,7 @@ function Login() {
 
     return (
         <>
+        {error && <div className="alert alert-danger col-4 m-auto">{error}</div>}
         <form className="register-form" onSubmit={handleSubmit}>
                 <img src="https://cardive.app/images/register.webp" alt="" className="form-bg" />
 
@@ -56,12 +57,13 @@ function Login() {
                         Email
                     </label>
                     <input
-                        type="text"
-                        className="form-control"
+                        type="email"
+                        className={`form-control justify-content-center ${error?.email ? "is-invalid" : ""} `}
                         id="email"
                         value={data.email}
                         onChange={handleChange}
                     />
+                    <div class="invalid-feedback">{ error?.name }</div>
                 </div>
 
                 <div className="m-auto col-4">
@@ -69,8 +71,8 @@ function Login() {
                         Password
                     </label>
                     <input
-                        type="text"
-                        className="form-control"
+                        type="password"
+                        className="form-control justify-content-center"
                         id="password"
                         value={data.password}
                         onChange={handleChange}

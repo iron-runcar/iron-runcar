@@ -12,6 +12,7 @@ export function AuthContextProvider({children}) {
     function handleLogin(user) {
         localStorage.CarItem("user", JSON.stringify(user));
         setUser(user);
+        navigate("/");
     }
 
     function handleLogout() {
