@@ -11,8 +11,16 @@
   color: rgb(55, 117, 76);
 }
 
-.img {
-    width: 150px;
-    float: right;
-   
+
+.register-form {
+  position: relative;
+}
+
+.register-form .form-bg {
+  position: absolute;
+  max-width: 150px;
+  width: 100%;
+  bottom: 0;
+  right: 300px;
+  z-index: -1;
 }
