@@ -1,0 +1,18 @@
+.form-control {
+    border: none;
+
+  background: 
+    repeating-linear-gradient(90deg, 
+        rgb(37, 87, 48) 0, 
+        dimgrey 1ch, 
+        transparent 0, 
+        transparent 1.5ch) 
+      0 100%/100% 2px no-repeat;
+  color: rgb(55, 117, 76);
+}
+
+.img {
+    width: 150px;
+    float: right;
+   
+}

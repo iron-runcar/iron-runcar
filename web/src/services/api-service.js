@@ -12,3 +12,7 @@ export function getCars() {
 export function getCarDetail(id) {
     return http.get(`/api/cars/${id}`);
 } 
+
+export function register(user) {
+    return http.post("/api/register", user);
+  }

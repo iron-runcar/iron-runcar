@@ -3,3 +3,75 @@ span.card-options-permanence {
     font-weight: bold;
     
 }
+
+
+.carousel {
+    max-width: 600px;
+    max-height: 300px;
+    margin-bottom: 110px
+}
+
+/* #tns1-iw {
+    margin: 0px -24px 0px 0px;
+}
+
+.planCarousel-item {
+    display: flex!important;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    max-height: 300px;
+    position: relative;
+}
+#tns1 {
+    width: calc(800%);
+    transition-duration: 0.3s;
+}
+
+#tns1 {
+    font-size: 0px;
+}
+.planCarousel .tns-slider {
+    align-items: center;
+}
+.tns-horizontal.tns-subpixel {
+    white-space: nowrap;
+}
+
+.tns-slider {
+    transition: all 0s;
+} */
+
+#custom_carousel .item {
+
+    color:#000;
+    background-color:#eee;
+    padding:20px 0;
+}
+#custom_carousel .controls{
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding:0;
+    margin:0;
+    white-space: nowrap;
+    text-align: center;
+    position: relative;
+    background:#ddd
+}
+#custom_carousel .controls li {
+    display: table-cell;
+    width: 1%;
+    max-width:90px
+}
+#custom_carousel .controls li.active {
+    background-color:#eee;
+    border-top:3px solid orange;
+}
+#custom_carousel .controls a small {
+    overflow:hidden;
+    display:block;
+    font-size:10px;
+    margin-top:5px;
+    font-weight:bold
+}

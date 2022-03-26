@@ -4,6 +4,7 @@ import CarDetail from "./components/cars/carDetail";
 import CarList from "./components/cars/carsList";
 import Footer from "./components/footer/footer";
 import NavBar from "./components/navbar/navbar";
+import Register from "./components/register/Register";
 
 function App() {
   return (
@@ -13,7 +14,7 @@ function App() {
         <Routes>  
           <Route path="/cars" element={<CarList/>}/>
           <Route path="/cars/:id" element={<CarDetail/>}/>
-     
+          <Route path="/register" element={<Register/>}/>
         </Routes>
       </div>
         <Footer />  
