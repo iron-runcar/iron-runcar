@@ -10,7 +10,7 @@ export function AuthContextProvider({children}) {
     const navigate = useNavigate();
 
     function handleLogin(user) {
-        localStorage.CarItem("user", JSON.stringify(user));
+        localStorage.setItem("user", JSON.stringify(user));
         setUser(user);
         navigate("/");
     }

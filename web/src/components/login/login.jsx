@@ -1,5 +1,5 @@
 import { useContext, useState } from "react";
-import { Navigate, useNavigate } from "react-router";
+import {  useNavigate } from "react-router-dom";
 import { AlertContext } from "../../contexts/alert-context";
 import { AuthContext } from "../../contexts/auth-context";
 import { login } from "../../services/api-service";
@@ -33,16 +33,17 @@ function Login() {
         login(data)
             .then((response) => {
                 showAlert(`Bienvenido ${response.data.name}!`);
+                console.log("logado")
                 handleLogin(response.data);
-                navigate("/");
+                navigate ("/");
             })
             .catch((error) => {
-                setError(error.response.data.message);
+                setError(error.response?.data.message || error.message);
             })
     }
 
     if (user) {
-        return <Navigate to="/" />;
+        return <navigate to="/" />;
     }
 
 

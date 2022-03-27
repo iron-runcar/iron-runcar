@@ -1,9 +1,11 @@
 import React from "react";
-import { Link, NavLink } from "react-router-dom";
+import {  NavLink } from "react-router-dom";
 import './navbar.css';
 import AuthContext from '../../contexts/auth-context';
 
 function NavBar() {
+  const { user } = React.useContext(AuthContext);
+  
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-light">
       <div className="container">
@@ -25,7 +27,9 @@ function NavBar() {
               <NavLink className="nav-link active" aria-current="page" to="/contact">¿Hablamos?</NavLink>
             </li>
             <li className="nav-item">
-              <NavLink className="nav-link btn rounded-pill btn-outline-success"to="/login">Login</NavLink>
+              {user && (
+                <NavLink className="nav-link btn rounded-pill btn-outline-success" to="/login">{user.email}</NavLink>
+              )}
             </li>
           </ul>
         </div>

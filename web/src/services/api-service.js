@@ -34,3 +34,7 @@ export function register(user) {
 export function login(user) {
     return http.post("/api/login", user);
 }
+
+export function profile(user) {
+    return http.get("/api/profile", user);
+}
