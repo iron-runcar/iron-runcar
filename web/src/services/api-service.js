@@ -38,3 +38,11 @@ export function login(user) {
 export function profile(user) {
     return http.get("/api/profile", user);
 }
+
+export function contact() {
+    return http.get("/contact");
+}
+
+export function faqs() {
+    return http.get("/faqs");
+}

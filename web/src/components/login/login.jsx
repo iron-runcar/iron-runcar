@@ -81,7 +81,7 @@ function Login() {
                 </div>
                 <div className="m-auto col-4 mt-2">
                     <div className="d-grid">
-                        <button type="submit" className="btn btn-primary">Login</button>
+                        <button type="submit" className="btn btn-success mt-5">Login</button>
                     </div>
                 </div>
             </form>

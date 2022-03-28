@@ -28,7 +28,7 @@ function NavBar() {
             </li>
             <li className="nav-item">
               {user && (
-                <NavLink className="nav-link btn rounded-pill btn-outline-success" to="/login">{user.email}</NavLink>
+                <NavLink className="nav-link btn rounded-pill btn-outline-success" to="/profile">{user.email}</NavLink>
               )}
             </li>
           </ul>

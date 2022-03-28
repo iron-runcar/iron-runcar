@@ -2,6 +2,8 @@ import React from "react";
 import { Route, Routes } from "react-router-dom";
 import CarDetail from "./components/cars/carDetail";
 import CarList from "./components/cars/carsList";
+import Contact from "./components/contact/contact";
+import Faqs from "./components/faqs/faqs";
 import Footer from "./components/footer/footer";
 import Login from "./components/login/login";
 import NavBar from "./components/navbar/navbar";
@@ -19,9 +21,11 @@ function App() {
           <Route path="/cars/:id" element={<CarDetail/>}/>
           <Route path="/register" element={<Register/>}/>
           <Route path="/login" element={<Login/>}/>
-          <Route path="/profile" 
-          element={<AuthGuard component={Profile} />}
-          />
+          <Route path="/profile"
+          element={<AuthGuard component={Profile} />}/>
+          <Route path="/contact" element={<Contact/>}/>
+          <Route path="/faqs" element={<Faqs/>}/>
+          
         </Routes>
       </div>
         <Footer />  

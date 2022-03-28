@@ -81,7 +81,7 @@ function Register() {
                 </div>
                 <div className="m-auto col-4 mt-2">
                     <div className="d-grid">
-                        <button type="submit" className="btn btn-primary">Registro</button>
+                        <button type="submit" className="mt-5 btn btn-success">Crear cuenta</button>
                     </div>
                 </div>
             </form>
