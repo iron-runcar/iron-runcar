@@ -10,7 +10,7 @@ module.exports.register =  (req, res, next) => {
       } else {
         const error = new Error('User already registered');
         error.errors = {
-          email: 'User email alredy registered'
+          email: 'User email already registered'
         }
         next(createError(400, error));
       }

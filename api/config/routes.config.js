@@ -19,6 +19,8 @@ router.get("/profile", secure.isAuthenticated, auth.profile);
 
 router.get("/booking/:userId", secure.isAuthenticated, booking.list)
 
+router.get("/");
+
 
 
 router.use((req, res, next) => next(createError(404, "Router not found")));
