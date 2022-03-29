@@ -20,7 +20,7 @@ function CarList() {
 
     return (
         
-            <div className="d-flex">
+            <div className="row mb-5">
 
                 {cars.map((car) =>
                     <CarItem {...car} key={car.id} />

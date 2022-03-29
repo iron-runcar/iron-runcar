@@ -1,25 +1,15 @@
 import React from 'react';
+//import { useState } from 'react';
 
 
-function CarOptions({ model, year, fuelType, horsePower, transmission, prices }) {
+function CarOptions({ model, year, fuelType, horsePower, transmission, prices, permanence}) {
     console.log(model)
 
+    /*function HandleClick() {
+        const [permanence, setPermanence] = useState();
+    }*/
 
-    /*  const price = prices.map((allPrices) => {
-         const price = allPrices.price;
-         return price
-     })  */
-    /* const price = prices[prices.length - 1]?.price
-    const permanence = prices.map((pricesWithPermanence) => {
-        const permanence = pricesWithPermanence.permanence;
-        if (permanence === "0"){
-            return "sin permanencia"
-        }else{
-            return permanence
-        }
-
-    }).join(", ") */
-
+      
     return (
 
         <div className="container">
@@ -29,19 +19,19 @@ function CarOptions({ model, year, fuelType, horsePower, transmission, prices })
             <div className="rounded-3 p-2 d-flex flex-column">
                 <h5 className="">{model}</h5>
                 <div className="d-flex justify-content-between">
-                    <span>{year}</span>
-                    <span>{fuelType}</span>
-                    <span>{transmission}</span>
-                    <span>{horsePower}</span>
+                    <span><i className='fa fa-calendar'></i> {year}</span>
+                    <span><i className='fa fa-gas'></i> {fuelType}</span>
+                    <span><i className='fa fa-gear'></i> {transmission}</span>
+                    <span><i className='fa fa-tachometer'></i> {horsePower}</span>
                 </div>
                 <div className="d-flex justify-content-between">
-                    {prices.map((priceWithPermanence, i) => {
+                    {prices.map((priceWithPermanence, i) => {                      
                         return (
                             <div class="form-check" key={i}>
-                                <input class="form-check-input" type="radio" name="permanence" id={`permanence-${i}`}/>
-                                <label class="form-check-label text-center" htmlFor={`permanence-${i}`}>
-                                    <small>{priceWithPermanence.permanence}</small>
-                                    <div className="border rounded p-3">{priceWithPermanence.price}</div>
+                                <input class="form-check-input opacity-0" type="radio"  name="permanence" id={`permanence-${i}`}/>
+                                <label class="form-check-label text-center" /*onClick={HandleClick}*/ htmlFor={`permanence-${i}`}>
+                                    <small>{priceWithPermanence.permanence} meses</small>
+                                    <div className="border rounded p-3">{priceWithPermanence.price} €</div>
                                 
                                     
                                 </label>
@@ -49,8 +39,25 @@ function CarOptions({ model, year, fuelType, horsePower, transmission, prices })
                         )
                     })}
                 </div>
+            </div>
 
-
+            <div className="booking pt-3">
+                <h6 className="title">RESUMEN DE TU SUSCRIPCIÓN</h6>
+                
+                <div className="d-flex">
+                    <h6 className='col-8'>Precio base al mes</h6>
+                    <div className="col-4">
+                        <p>{permanence}</p>
+                    </div>
+                </div>
+                
+                <div className='d-flex'>
+                    <h4 className='col-8'>Cuota mensual </h4>
+                    <div className="col-4">
+                        <p>{permanence}</p>
+                    </div>
+                </div>
+                
 
             </div>
         </div>
