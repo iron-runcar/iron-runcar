@@ -1,13 +1,18 @@
 import React from 'react';
-//import { useState } from 'react';
+import { useState } from 'react';
 
 
-function CarOptions({ model, year, fuelType, horsePower, transmission, prices, permanence}) {
+function CarOptions({ model, year, fuelType, horsePower, transmission, prices }) {
     console.log(model)
 
-    /*function HandleClick() {
-        const [permanence, setPermanence] = useState();
-    }*/
+    const [permanence, setPermanence] = React.useState();
+    
+    
+    function HandleClick() {
+       onclick(permanence).then(() => {
+           return setPermanence;
+       });
+    }
 
       
     return (
@@ -29,7 +34,7 @@ function CarOptions({ model, year, fuelType, horsePower, transmission, prices, p
                         return (
                             <div class="form-check" key={i}>
                                 <input class="form-check-input opacity-0" type="radio"  name="permanence" id={`permanence-${i}`}/>
-                                <label class="form-check-label text-center" /*onClick={HandleClick}*/ htmlFor={`permanence-${i}`}>
+                                <label class="form-check-label text-center" onclick= {HandleClick} htmlFor={`permanence-${i}`}>
                                     <small>{priceWithPermanence.permanence} meses</small>
                                     <div className="border rounded p-3">{priceWithPermanence.price} €</div>
                                 
@@ -47,14 +52,14 @@ function CarOptions({ model, year, fuelType, horsePower, transmission, prices, p
                 <div className="d-flex">
                     <h6 className='col-8'>Precio base al mes</h6>
                     <div className="col-4">
-                        <p>{permanence}</p>
+                        <p></p>
                     </div>
                 </div>
                 
                 <div className='d-flex'>
                     <h4 className='col-8'>Cuota mensual </h4>
                     <div className="col-4">
-                        <p>{permanence}</p>
+                        <p>{HandleClick}</p>
                     </div>
                 </div>
                 

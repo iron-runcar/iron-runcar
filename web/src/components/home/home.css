@@ -1,0 +1,27 @@
+
+.image-bg {
+    transform: rotate(0deg);
+    
+}
+
+h1.text-center {
+    font-size: 55px;
+    color: rgb(94, 133, 16);
+}
+
+.rounded-pill {
+    border-radius: 50rem!important;
+    height: 30px;
+}
+
+.badge {
+    display: inline-block;
+    padding: 0.35em 0.65em;
+    font-size: large;
+    font-weight: 700;
+    color: #fff;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    border-radius: 0.25rem;
+}

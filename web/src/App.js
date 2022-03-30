@@ -5,6 +5,7 @@ import CarList from "./components/cars/carsList";
 import Contact from "./components/contact/contact";
 import Faqs from "./components/faqs/faqs";
 import Footer from "./components/footer/footer";
+import Home from "./components/home/home";
 import Login from "./components/login/login";
 import NavBar from "./components/navbar/navbar";
 import Profile from "./components/profile/profile";
@@ -25,6 +26,7 @@ function App() {
           element={<AuthGuard component={Profile} />}/>
           <Route path="/contact" element={<Contact/>}/>
           <Route path="/faqs" element={<Faqs/>}/>
+          <Route path="/" element={<Home/>}/>
           
         </Routes>
       </div>
