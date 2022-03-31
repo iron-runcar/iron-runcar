@@ -2,7 +2,7 @@ const createError = require("http-errors");
 const Car = require("../models/car.model");
 
 module.exports.list = (req, res, next) => {
-  Car.find()
+  Car.find({ ownerId: { $ne: req.user.id }})
     .then(
       cars => res.json(cars))
     .catch((error) => next(error));

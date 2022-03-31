@@ -11,7 +11,8 @@ module.exports.create = (req, res, next) => {
     .then(car => {
       if (!car) {
         next(createError(404, `Car ${req.params.carId} not found`));
-      } else if (car.ownerId = req.user.id){
+      } else if (car.ownerId === req.user.id){
+        console.log('eeeee', req.user.id)
         next(createError(403, `Car ${req.params.carId} is booked`))
       } else {
         const permanence = req.body.permanence;
