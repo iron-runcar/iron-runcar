@@ -27,9 +27,11 @@ function NavBar() {
               <NavLink className="nav-link active" aria-current="page" to="/contact">¿Hablamos?</NavLink>
             </li>
             <li className="nav-item">
-              {user && (
-                <NavLink className="nav-link btn rounded-pill btn-outline-success" to="/profile">{user.email}</NavLink>
-              )}
+              {user ?(
+                <NavLink className="nav-link btn rounded-pill btn-outline-success" to="/profile">{user.email}</NavLink> 
+              ):  (<NavLink className="nav-link btn rounded-pill btn-outline-success" to="/login">Login</NavLink>)
+            }
+
             </li>
           </ul>
         </div>

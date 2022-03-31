@@ -46,3 +46,7 @@ export function contact() {
 export function faqs() {
     return http.get("/faqs");
 }
+
+export function booking(id, data) {
+    return http.post(`/api/cars/${id}/bookings`, data);
+}

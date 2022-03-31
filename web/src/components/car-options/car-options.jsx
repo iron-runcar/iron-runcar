@@ -1,19 +1,27 @@
 import React from 'react';
 import { useState } from 'react';
+import { useNavigate } from 'react-router';
+import { Link } from 'react-router-dom';
+import AuthContext from '../../contexts/auth-context';
+import { booking } from '../../services/api-service';
 
 
-function CarOptions({ model, year, fuelType, horsePower, transmission, prices }) {
-    console.log(model)
-
-    const [permanence, setPermanence] = React.useState();
+function CarOptions({ model, year, fuelType, horsePower, transmission, prices, id }) {
     
-    
-    function HandleClick() {
-       onclick(permanence).then(() => {
-           return setPermanence;
-       });
+    const { user } = React.useContext(AuthContext);
+    const navigate= useNavigate()
+    const [priceWithPermanenceSelected, setPriceWithPermanenceSelected] = React.useState();
+
+    function handleBooking() {
+        booking(id, priceWithPermanenceSelected)
+        .then(()=> {
+            console.log("ey")
+            navigate("/profile")
+        })
     }
-
+    
+    
+   
       
     return (
 
@@ -34,7 +42,13 @@ function CarOptions({ model, year, fuelType, horsePower, transmission, prices })
                         return (
                             <div class="form-check" key={i}>
                                 <input class="form-check-input opacity-0" type="radio"  name="permanence" id={`permanence-${i}`}/>
-                                <label class="form-check-label text-center" onclick= {HandleClick} htmlFor={`permanence-${i}`}>
+                                <label
+                                    class="form-check-label text-center"
+                                    onClick={() => {
+                                        setPriceWithPermanenceSelected(priceWithPermanence)
+                                    }}
+                                    htmlFor={`permanence-${i}`}
+                                >
                                     <small>{priceWithPermanence.permanence} meses</small>
                                     <div className="border rounded p-3">{priceWithPermanence.price} €</div>
                                 
@@ -59,12 +73,17 @@ function CarOptions({ model, year, fuelType, horsePower, transmission, prices })
                 <div className='d-flex'>
                     <h4 className='col-8'>Cuota mensual </h4>
                     <div className="col-4">
-                        <p>{HandleClick}</p>
+                        <p>{priceWithPermanenceSelected?.price}</p>
                     </div>
                 </div>
-                
-
             </div>
+            <div className="d-flex">
+            {user? <button onClick={handleBooking}>Resérvalo</button> : <Link className="badge rounded-pill bg-success position-absolute" aria-current="page" to="/register">Registrate</Link>
+           
+            };
+        
+            </div>
+            
         </div>
     );
 }
