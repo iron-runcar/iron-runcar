@@ -1,17 +1,22 @@
 import './home.css';
+// import {Homeimg }from './images'
+
 
 function Home (){
 
+    // const Homeimg = require.context("./images", true);
 
-
-
-
+    
 
     return (
 
         <>
             <div className="d-flex w-100 mt-5">
-            <img src="https://bipicar.com/_nuxt/img/c0d46b6.png" alt="" className="image-bg m-auto" />
+            {/* <img src={Homeimg.png} alt="" className="image-bg m-auto" /> */}
+            {/* <img src={Homeimg(`./${ Homeimg }.png`)} alt={Homeimg} className="image-bg m-auto"/> */}
+
+            </div>
+            <div className="d-flex w-100 mt-5">
             </div>
 
             <div className="d-flex w-100 mt-5">

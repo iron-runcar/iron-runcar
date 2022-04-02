@@ -9,7 +9,7 @@ import Home from "./components/home/home";
 import Login from "./components/login/login";
 import NavBar from "./components/navbar/navbar";
 import Profile from "./components/profile/profile";
-import Register from "./components/register/Register";
+import Register from "./components/register/register";
 import AuthGuard from "./guards/auth-guard";
 
 function App() {

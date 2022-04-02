@@ -2,6 +2,10 @@ import { useState, useContext } from "react";
 import './register.css';
 import { AlertContext } from "../../contexts/alert-context";
 import { register } from "../../services/api-service";
+import {AuthContext} from "../../contexts/auth-context";
+import react from "react";
+
+
 
 function Register() {
     const [data, setData] = useState({
@@ -12,6 +16,7 @@ function Register() {
 
     const [error, setError] = useState();
     const { showAlert } = useContext(AlertContext);
+    const { user } = useContext(AuthContext);
 
 
     function handleChange(user) {
@@ -36,6 +41,9 @@ function Register() {
                 setError(error.response.data.message);
             })
 
+    }
+    if (user) {
+        return <navigate to="/cars" />;
     }
 
 
