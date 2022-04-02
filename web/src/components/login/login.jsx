@@ -1,5 +1,5 @@
 import { useContext, useState } from "react";
-import {  useNavigate } from "react-router-dom";
+import {  Navigate, useNavigate } from "react-router";
 import { AlertContext } from "../../contexts/alert-context";
 import { AuthContext } from "../../contexts/auth-context";
 import { login } from "../../services/api-service";
@@ -35,7 +35,7 @@ function Login() {
                 showAlert(`Bienvenido ${response.data.name}!`);
                 console.log("logado")
                 handleLogin(response.data);
-                navigate ("/");
+                navigate ("/cars");
             })
             .catch((error) => {
                 setError(error.response?.data.message || error.message);
@@ -43,7 +43,7 @@ function Login() {
     }
 
     if (user) {
-        return <navigate to="/" />;
+        return <Navigate to="/profile" />;
     }
 
 

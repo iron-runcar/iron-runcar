@@ -25,3 +25,7 @@ h1.text-center {
     vertical-align: middle;
     border-radius: 0.25rem;
 }
+
+.image-bg {
+    width: 900px;
+}

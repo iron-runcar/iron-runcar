@@ -1,6 +1,6 @@
 
 import React, { useEffect, useState } from "react";
-import { getCars } from "../../services/api-service";
+import { getBooking, getCars } from "../../services/api-service";
 import CarItem from "./CarItem";
 
 
@@ -9,13 +9,20 @@ function CarList() {
     const [cars, setCars] = useState();
 
     useEffect(() => {
-        getCars()
+        getBooking()
             .then((response) => {
-                setCars(response.data)
+                const booking = response.data[0]
+
+                getCars()
+                    .then((response) => {
+                        const cars  = response.data.filter(car => car.id !== booking?.car?.id)
+                        setCars(cars)
+                    })
+                    .catch(error => console.error(error))
             })
-            .catch(error => console.error(error))
     }, []);
 
+   
     if (!cars) return <> </>
 
     return (

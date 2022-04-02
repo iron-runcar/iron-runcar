@@ -1,20 +1,15 @@
 import './home.css';
-// import {Homeimg }from './images'
+import homeimg from '../images/Homeimg.png'
 
 
 function Home (){
 
-    // const Homeimg = require.context("./images", true);
-
     
-
     return (
 
         <>
             <div className="d-flex w-100 mt-5">
-            {/* <img src={Homeimg.png} alt="" className="image-bg m-auto" /> */}
-            {/* <img src={Homeimg(`./${ Homeimg }.png`)} alt={Homeimg} className="image-bg m-auto"/> */}
-
+            <img src={homeimg} alt="home_img" className="image-bg m-auto" />
             </div>
             <div className="d-flex w-100 mt-5">
             </div>

@@ -50,3 +50,7 @@ export function faqs() {
 export function booking(id, data) {
     return http.post(`/api/cars/${id}/bookings`, data);
 }
+
+export function getBooking() {
+    return http.get("/api/bookings");
+}

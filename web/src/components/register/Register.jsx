@@ -3,7 +3,7 @@ import './register.css';
 import { AlertContext } from "../../contexts/alert-context";
 import { register } from "../../services/api-service";
 import {AuthContext} from "../../contexts/auth-context";
-import react from "react";
+import { Navigate, useNavigate } from "react-router-dom";
 
 
 
@@ -17,6 +17,7 @@ function Register() {
     const [error, setError] = useState();
     const { showAlert } = useContext(AlertContext);
     const { user } = useContext(AuthContext);
+    const navigate = useNavigate();
 
 
     function handleChange(user) {
@@ -35,6 +36,7 @@ function Register() {
         register(data)
             .then((response) => {
                 showAlert("Bienvenido Looker");
+                navigate ("/login");
 
             })
             .catch((error) => {
@@ -43,7 +45,7 @@ function Register() {
 
     }
     if (user) {
-        return <navigate to="/cars" />;
+        return <Navigate to="/login" />;
     }
 
 
