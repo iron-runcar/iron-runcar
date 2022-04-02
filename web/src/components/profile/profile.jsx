@@ -1,4 +1,5 @@
 import react from "react";
+import Car from "../../../../api/models/car.model";
 
 import { AuthContext } from "../../contexts/auth-context";
 import './profile.css';
@@ -20,7 +21,7 @@ function Profile(car, image, brand) {
 
                 <div className="vehicle d-flex flex-direction-column">
                   <div className="card1">
-                    <p className="CarName text-white fs-4">{car.brand}Citroen</p>
+                    <p className="CarName text-white fs-4">{Car.brand}Citroen</p>
                     <img src="https://bipi-pro.s3.eu-west-1.amazonaws.com/specificvehicleplans/5d6cfff74d4f4700259feaf6/vehicle-images/5fb2426f5c02f700a1eaa6e4_2020_11_16_10_12_15.png" alt="" className="display-inline-block vertical-align-middle" />
                   </div>
                 </div>
