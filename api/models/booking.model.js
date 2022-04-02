@@ -29,6 +29,10 @@ const bookingSchema = new Schema({
   endDate: {
     type: Date,
     required: 'end booking date is required'
+  },
+  kilometersIncludes: {
+    type: Number,
+    default: 1000
   }
 }, {
   timestamps: true,

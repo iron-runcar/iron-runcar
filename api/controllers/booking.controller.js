@@ -34,8 +34,9 @@ module.exports.create = (req, res, next) => {
 };
 
 module.exports.list = (req, res, next) => {
-  Booking.find()
+  Booking.find({ owner: req.user.id})
     .populate('owner')
+    .populate('car')
     .then(booking => res.json(booking))
     .catch((error) => next(error));
 };

@@ -17,7 +17,7 @@ router.post("/login", auth.login);
 router.post("/logout", auth.logout);
 router.get("/profile", secure.isAuthenticated, auth.profile);
 
-router.get("/booking/:userId", secure.isAuthenticated, booking.list)
+router.get("/bookings", secure.isAuthenticated, booking.list)
 
 router.get("/");
 
