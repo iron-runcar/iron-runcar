@@ -8,7 +8,7 @@ function Home() {
     return (
 
         <>
-            <div className="d-flex w-100">
+            <div className="d-flex w-100 mb-3">
                 <img src={homeimg} alt="home_img" className="image-bg m-auto" />
             </div>
             <div className="d-flex w-100">
@@ -23,7 +23,7 @@ function Home() {
 
             <div className="d-flex row text-center mt-5 mb-4">
                 <div className="col-12 steps mb-4">
-                    <h3 className="">¿Cómo funciona Looker?</h3>
+                    <h3 className="fw-bold">¿Cómo funciona Looker?</h3>
                 </div>
             </div>
 
@@ -62,21 +62,23 @@ function Home() {
 
             </ul>
 
-            <section className="why-container me-5">
+            <section className="why-container me-5 mt-5">
                 <div className="row all mb-5">
                     <div className="col-4">
                         <h3 className='title-section fw-bolder'>¿Por qué Looker?</h3>
                     </div>
                     <div className="col-4">
+                        <div className="pr1">
                         <img src="https://cardive.app/_nuxt/img/handdrawn_rounded.2b2f014.svg" alt="hand rounded svg" className="icon-draw position-absolute" />
-
+                        </div>
                         <h5 className='mb-3'>100% flexible, <br /> tú decides</h5>
                         <p className='me-5'>Cambia de coche si quieres, a partir del sexto mes según tus necesidades.</p>
 
                     </div>
                     <div className="col-4">
+                        <div className="pr2">
                         <img src="https://cardive.app/_nuxt/img/handdrawn_arrow.496d746.svg" alt="hand rounded svg" className="icon-draw-1 position-absolute" />
-
+                        </div>
                         <h5 className='mb-3'>Te lo llevamos <br />a la puerta de tu casa</h5>
                         <p className='me-5'>O si te viene mejor, puedes pasar a recogerlo totalmente gratis</p>
                     </div>
@@ -94,6 +96,9 @@ function Home() {
                         <p>Sin trampa ni cartón, sin letra pequeña, ni gastos inesperados, tu cuota y nada más.</p>
                     </div>
                     <div className="col-4">
+                        <div className="pr3">
+                            <img src="https://cardive.app/_nuxt/img/handdrawn_attention.f70222c.svg" alt="hand rounded svg" className="icon-draw-3 position-absolute" />
+                        </div>
                         <h5 className='mb-3'>En las buenas y en las<br /> "no tan buenas"</h5>
                         <p>Seguro a todo riesgo con franquicia y asistencia en carretera 24/7, aunque ojalá no lo necesites nunca.</p>
                     </div>

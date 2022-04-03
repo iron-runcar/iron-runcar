@@ -59,21 +59,43 @@ h1.text-center {
 }
 
 .icon-draw {
-    
-    left: 31rem;
     width: 11rem;
-} 
+}  
 
 .icon-draw-1 {   
-    left: 56rem;
     width: 3rem;   
 } 
 .icon-draw-2 {  
     width: 9rem;   
 } 
+.icon-draw-3 {  
+    width: 2rem; 
+     
+} 
 
 .pr {
-    top: 200px;
+   
     margin-top: -20px;
     margin-bottom: 39px;
+}
+
+.pr1 {
+   
+    margin-top: -20px;
+    margin-left: -20px;
+}
+.pr2 {
+    margin-top: -20px;
+    margin-left: -49px;
+}
+.pr3 {
+    margin-left: 196px;
+}
+
+h3 {
+    color: rgb(94, 133, 16); 
+}
+.why-container {
+    margin-top: 120px;
+    margin-bottom: 100px;
 }
