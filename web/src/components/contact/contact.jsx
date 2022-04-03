@@ -4,21 +4,21 @@ function Contact() {
 
     return (
         <>
-            <div className="row ms-5 mt-5">
+            <div className="row contact ms-5">
 
                 <div className="col-5">
                     <img src="https://cardive.imgix.net/images/leafs-right.png?w=80&fm=webp" alt="" className="image-bg-contact position-absolute" />
 
-                    <h4 className='mb-5 d-inline-block text-center'>¿Tienes alguna duda? <br />Contáctanos!!!</h4>
+                    <h3 className='mb-5 d-inline-block text-center'>¿Tienes alguna duda? <br />Contáctanos!!!</h3>
                     <ul className='list-unstyled mt-3 ms-3'>
-                        <li><span><i className="icon me-3 mb-3 fa fa-phone"></i>937317311</span></li>
-                        <li><span><i className="icon me-3 mb-3 fa fa-whatsapp"></i>600000666</span></li>
-                        <li><span><i className="icon me-3 fa fa-map-marker"></i>Avda.Diagonal, 686 Barcelona (08034)</span></li>
+                        <li><span><i className="icon me-3 mb-3 fa-lg fa fa-phone"></i><strong>937317311</strong></span></li>
+                        <li><span><i className="icon me-3 mb-3 fa-lg fa fa-whatsapp"></i><strong>600000666</strong></span></li>
+                        <li><span><i className="icon me-3 fa-lg fa fa-map-marker"></i><strong>Avda.Diagonal, 686 Barcelona (08028)</strong></span></li>
 
                     </ul>
                     <div className="d-flex">
-                        <div className="box-1 border rounded-3 p-3 mt-5 d-flex  text-center me-2">Lunes-Viernes <br />9-20h</div>
-                        <div className="box-1 border rounded-3 p-3 mt-5 d-flex  text-center">Sábados-Domingos <br />9-15h</div>
+                        <div className="box-1 border  p-3 mt-5 d-flex  text-center me-2">Lunes-Viernes<br />9-20h</div>
+                        <div className="box-1 border  p-3 mt-5 d-flex  text-center">Sábados-Domingos <br />9-15h</div>
                     </div>
 
                 </div>

@@ -29,9 +29,9 @@ function CarDetail() {
 
         <div className="container bg">
 
-            <div className=" bg-transparent d-flex rounded-3">
+            <div className="bg-transparent d-flex">
 
-                <div className="bg-1 rounded-3 position-relative">
+                <div className="bg-1 position-relative">
                 <img src="https://cardive.imgix.net/images/leafs-right.png?w=80&fm=webp" alt="" className="leaves position-absolute" />
 
                     <div className="position-absolute ms-5 mt-3 fw-bold fs-4 text-light ">{brand}</div>
@@ -63,7 +63,7 @@ function CarDetail() {
                                 Llantas de aleación<br />
                                 Tejido negro</p>
                         </div>
-                        <div className="col-4 bg-light rounded-3 mr-3">
+                        <div className="car-booking col-4 bg-light">
                             <CarOptions {...car} />
                         </div>
                     </div>

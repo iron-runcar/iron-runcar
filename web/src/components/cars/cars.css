@@ -53,10 +53,14 @@ span.card-options-permanence {
     background-color: rgba(37, 34, 37, 0.658);
     height:300px;
     width: 100%;
+    box-shadow: 0 2px 8px rgb(43 54 71 / 30%);
+    border-radius: 16px;
 }
 
 .bg transparent{
     height:1200px;
+    box-shadow: 0 2px 8px rgb(43 54 71 / 30%);
+    border-radius: 16px;
 }
 
 .options {
@@ -103,4 +107,22 @@ input:checked + label div {
     -moz-transition-timing-function: ease-out;
     -moz-transition-duration: 50ms;
 }
+h2 {
+    font-size: 38px;
+    color: rgb(94, 133, 16);
+}
  
+.card-notify-badge {
+    color: rgb(94, 133, 16);
+    font-size: 22px;
+}
+.desde {
+    margin-top: 7px;
+}
+.car-booking {
+    box-shadow: 0 2px 8px rgb(43 54 71 / 30%);
+    border-radius: 16px;
+    margin-left: -30px;
+    margin-top: -30px;
+    max-height: 600px;
+}

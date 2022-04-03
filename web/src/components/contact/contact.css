@@ -1,6 +1,6 @@
 .image-bg-contact {
     width:90px;
-    margin-left: 981px;
+    margin-left: 1040px;
     transform: rotate(180deg);
     margin-top: -3px;
 }
@@ -15,8 +15,13 @@
 
 .icon {
     color: rgb(94, 133, 16);
+
 }
 
 .box-1 {
     box-shadow: 0 2px 8px rgb(43 54 71 / 30%);
+    border-radius: 16px;
+}
+.row.contact {
+    margin-top: 100px;
 }
