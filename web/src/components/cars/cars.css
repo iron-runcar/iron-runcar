@@ -68,3 +68,13 @@ span.card-options-permanence {
 input:checked + label div {
     background: red;
 }
+
+.leaves {
+    width: 90px;    
+    margin-left: -90px;
+    margin-top: -25px;
+
+}
+.rl {
+    justify-content: space-evenly;
+}

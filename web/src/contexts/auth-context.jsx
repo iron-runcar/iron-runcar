@@ -18,7 +18,7 @@ export function AuthContextProvider({children}) {
     function handleLogout() {
         localStorage.clear();
         setUser(null);
-        navigate("/login");
+        navigate("/");
     }
 
     const value = {

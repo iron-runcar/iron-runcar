@@ -29,18 +29,26 @@ function NavBar() {
             <li className="nav-item d-flex align-items-baseline">
               {user ? (
                 <>
-                  <NavLink className="nav-link btn rounded-pill btn-outline-success" to="/profile">{user.email.slice(0, 3)}</NavLink>  
+                  <NavLink className="nav-link btn rounded-pill btn-outline-success" to="/profile">{user.email.slice(0, 3)}</NavLink>
                   <li>
-                      <button className="btn rounded-pill btn-danger mt-2 d-flex ms-2 align-items: center;
-    justify-content: space-around" onClick={handleLogout}>o͝o </button>
+                    <button className="btn rounded-pill btn-danger mt-2 d-flex ms-2 align-items: center;
+                    justify-content: space-around" onClick={handleLogout}>o͝o </button>
                   </li>
                 </>
-              ) : (<NavLink className="nav-link btn rounded-pill btn-outline-success d-flex justify-content-center" to="/login">o͝o</NavLink>)
+
+              ) : (
+                <>
+                  <NavLink className="nav-link btn rounded-pill btn-outline-success d-flex justify-content-center" to="/login">o͝o</NavLink>
+                  <li>
+                    <NavLink className="nav-link btn rounded-pill btn-outline-success" to="/register">Regístrate</NavLink>
+                  </li>
+                </>
+              )
               }
 
             </li>
-          
-            
+
+
           </ul>
         </div>
       </div>

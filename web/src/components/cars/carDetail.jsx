@@ -32,7 +32,7 @@ function CarDetail() {
             <div className=" bg-transparent d-flex rounded-3">
 
                 <div className="bg-1 rounded-3 position-relative">
-                <img src="https://cardive.imgix.net/images/leafs-right.png?w=80&fm=webp" alt="" className="image-bg position-absolute" />
+                <img src="https://cardive.imgix.net/images/leafs-right.png?w=80&fm=webp" alt="" className="leaves position-absolute" />
 
                     <div className="position-absolute ms-5 mt-3 fw-bold fs-4 text-light ">{brand}</div>
 
