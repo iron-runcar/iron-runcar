@@ -1,17 +1,22 @@
-.gmap-canvas{
-
-}
-.mapouter{
-    position:relative;
-    text-align:right;
-    height:345px;
-    width:532px;
+.image-bg-contact {
+    width:90px;
+    margin-left: 981px;
+    transform: rotate(180deg);
+    margin-top: -3px;
 }
 
-.gmap_canvas {
+.gmap-canvas {
     overflow:hidden;
     background:none!important;
-    height:345px;
-    width:532px;
+    box-shadow: 0 2px 8px rgb(43 54 71 / 30%);
+    background: #2b3647;
+    border-radius: 16px;
 }
-           
+
+.icon {
+    color: rgb(94, 133, 16);
+}
+
+.box-1 {
+    box-shadow: 0 2px 8px rgb(43 54 71 / 30%);
+}

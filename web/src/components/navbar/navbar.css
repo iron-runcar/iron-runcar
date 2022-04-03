@@ -1,4 +1,25 @@
-/* .navbar-brand {
-    margin-right: 300px;
-} */
+.rounded-pill {
+    height: 40px;
+    width: 40px;
+    display: flex;
+    align-content: center;
+    
+}
+.navbar-brand {
+    -webkit-transform: scale(1,1); 
+    -webkit-transition-timing-function: ease-out;
+    -webkit-transition-duration: 100ms;
+    -moz-transition: scale(1,1);
+    -moz-transition-timing-function: ease-out;
+    -moz-transition-duration: 100ms;
+ }
+ 
+ .navbar-brand:hover {
+     -webkit-transform: scale(1.12,1.12); 
+     -webkit-transition-timing-function: ease-out;
+     -webkit-transition-duration: 50ms;
+     -moz-transition: scale(1.12,1.12);
+     -moz-transition-timing-function: ease-out;
+     -moz-transition-duration: 50ms;
+  }
 

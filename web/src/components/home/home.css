@@ -1,9 +1,3 @@
-
-.image-bg {
-    transform: rotate(0deg);
-    
-}
-
 h1.text-center {
     font-size: 55px;
     color: rgb(94, 133, 16);
@@ -12,6 +6,7 @@ h1.text-center {
 .rounded-pill {
     border-radius: 50rem!important;
     height: 30px;
+    color: rgb(94, 133, 16);
 }
 
 .badge {
@@ -24,8 +19,61 @@ h1.text-center {
     white-space: nowrap;
     vertical-align: middle;
     border-radius: 0.25rem;
+    display: flex;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
 }
 
 .image-bg {
     width: 900px;
+}
+.title {
+    color: rgb(94, 133, 16);
+}
+
+.image-bg {
+   -webkit-transform: scale(1,1); 
+   -webkit-transition-timing-function: ease-out;
+   -webkit-transition-duration: 100ms;
+   -moz-transition: scale(1,1);
+   -moz-transition-timing-function: ease-out;
+   -moz-transition-duration: 100ms;
+}
+
+.image-bg:hover {
+    -webkit-transform: scale(1.12,1.12); 
+    -webkit-transition-timing-function: ease-out;
+    -webkit-transition-duration: 50ms;
+    -moz-transition: scale(1.12,1.12);
+    -moz-transition-timing-function: ease-out;
+    -moz-transition-duration: 50ms;
+ }
+ 
+ .row {
+    margin-top: 60px;
+}
+
+.title-section {
+    color: rgb(94, 133, 16); 
+}
+
+.icon-draw {
+    
+    left: 31rem;
+    width: 11rem;
+} 
+
+.icon-draw-1 {   
+    left: 56rem;
+    width: 3rem;   
+} 
+.icon-draw-2 {  
+    width: 9rem;   
+} 
+
+.pr {
+    top: 200px;
+    margin-top: -20px;
+    margin-bottom: 39px;
 }

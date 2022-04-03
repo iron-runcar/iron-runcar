@@ -18,7 +18,7 @@ function NavBar() {
             <li className="nav-item">
               <NavLink className="nav-link active d-flex align-self-center" aria-current="page" to="/cars">Ver flota</NavLink>
             </li>
-            <li className="nav-item">
+            <li className="nav-item d-flex align-items-center">
               <NavLink className="nav-link" to="/faqs">Como funciona</NavLink>
             </li>
           </ul>
@@ -26,15 +26,16 @@ function NavBar() {
             <li className="nav-item">
               <NavLink className="nav-link active" aria-current="page" to="/contact">¿Hablamos?</NavLink>
             </li>
-            <li className="nav-item">
+            <li className="nav-item d-flex align-items-baseline">
               {user ? (
                 <>
-                  <NavLink className="nav-link btn rounded-pill btn-outline-success" to="/profile">{user.email}</NavLink>  
+                  <NavLink className="nav-link btn rounded-pill btn-outline-success" to="/profile">{user.email.slice(0, 3)}</NavLink>  
                   <li>
-                      <button className="btn btn-danger mt-3" onClick={handleLogout}> Log out</button>
+                      <button className="btn rounded-pill btn-danger mt-2 d-flex ms-2 align-items: center;
+    justify-content: space-around" onClick={handleLogout}>o͝o </button>
                   </li>
                 </>
-              ) : (<NavLink className="nav-link btn rounded-pill btn-outline-success" to="/login">Login</NavLink>)
+              ) : (<NavLink className="nav-link btn rounded-pill btn-outline-success d-flex justify-content-center" to="/login">o͝o</NavLink>)
               }
 
             </li>
