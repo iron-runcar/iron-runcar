@@ -34,7 +34,9 @@ function Profile({ brand, day, month, year}) {
     console.log(booking, "ey")
 
   return (
+    
     <>
+  
       <div className="row d-flex flex-wrap-wrap">
         <div className="col-12 position-relative w-100">
           <div className="d-flex mb-5">

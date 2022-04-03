@@ -20,7 +20,7 @@ function CarItem({ brand, prices, image, model, id }) {
     return (
 
         <div className="col-md-3">
-            <div className="card rounded m-2">
+            <div className="card m-2">
                 <div className="container d-flex me-auto justify-content-between card-image">
                     <div><span className="card-notify-badge  me-auto font-weight-bold">{brand}</span></div>
                     <div><span className="card-notify-price  me-auto">Desde {price}€</span></div>
