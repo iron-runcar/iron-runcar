@@ -1,13 +1,14 @@
 .form-control {
-    border: none;
-    border-bottom: 1px solid rgb(27, 107, 34);
-    border-radius: 0;
+    border-bottom: 1px solid rgb(94, 133, 16);
+    border-radius: 16px;
 }
 
   
 .register-form {
   position: relative;
   background-color:transparent;
+  margin-top: 80px;
+  
 }
 
 .register-form .form-bg {
@@ -24,5 +25,15 @@
   background-color: #fff;
   border-color: #86b7fe;
   outline: 0;
-  box-shadow: none;
+  box-shadow: 0 2px 8px rgb(43 54 71 / 30%);
+}
+.btn-outline-success {
+  color: rgb(94, 133, 16);
+  border-color: rgb(94, 133, 16);
+  border-radius: 16px;
+ 
+}
+.btn-outline-success:hover {
+  box-shadow: 0 2px 8px rgb(43 54 71 / 30%);
+  
 }

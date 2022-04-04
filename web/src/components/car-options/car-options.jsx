@@ -4,6 +4,7 @@ import { useNavigate } from 'react-router';
 import { Link } from 'react-router-dom';
 import AuthContext from '../../contexts/auth-context';
 import { booking } from '../../services/api-service';
+import './car-options.css';
 
 
 function CarOptions({ model, year, fuelType, horsePower, transmission, prices, id }) {
@@ -24,21 +25,21 @@ function CarOptions({ model, year, fuelType, horsePower, transmission, prices, i
     return (
 
         <div className="container">
-            <h5 className="title">Configura tu suscripción</h5>
-            <h6 className="title">Elige modelo y flexibilidad</h6>
+            <h5 className="title mt-4"><strong>Configura tu suscripción</strong></h5>
+            <h6 className="title mb-3">Elige modelo y flexibilidad</h6>
 
-            <div className="rounded-3 p-2 d-flex flex-column">
-                <h5 className="">{model}</h5>
-                <div className="d-flex justify-content-between">
+            <div className="rounded-3 p-3 d-flex flex-column">
+                <h5 className="mb-3"><strong>{model}</strong></h5>
+                <div className="d-flex justify-content-between mb-2">
                     <span><i className='fa fa-calendar'></i> {year}</span>
                     <span><i className='fa fa-star-half-o'></i> {fuelType}</span>
                     <span><i className='fa fa-gear'></i> {transmission}</span>
-                    <span><i className='fa fa-tachometer'></i> {horsePower}</span>
+                    <span><i className='fa fa-tachometer'></i> {horsePower}CV</span>
                 </div>
                 <div className="d-flex justify-content-between">
                     {prices.map((priceWithPermanence, i) => {
                         return (
-                            <div class="form-check" key={i}>
+                            <div class="form-check-1" key={i}>
                                 <input class="form-check-input opacity-0" type="radio" name="permanence" id={`permanence-${i}`} />
                                 <label
                                     class="form-check-label text-center"
@@ -58,29 +59,23 @@ function CarOptions({ model, year, fuelType, horsePower, transmission, prices, i
                 </div>
             </div>
 
-            <div className="booking pt-3">
-                <h6 className="title">RESUMEN DE TU SUSCRIPCIÓN</h6>
+            <div className="booking pt-3 mt-4">
+                <h5 className="title mb-4"><strong>Resumen de tu suscripción</strong></h5>
 
-                <div className="d-flex">
-                    <h6 className='col-8'>Precio base al mes</h6>
-                    <div className="col-4">
-                        <p></p>
+                <div className='d-flex rounded-3 align-items-end'>
+                    <div className='col-9 ms-3 fs-5'>Cuota mensual </div>
+                    <div className=" total fs-5 col-3">{priceWithPermanenceSelected?.price}€
+        
                     </div>
                 </div>
 
-                <div className='d-flex'>
-                    <h4 className='col-8'>Cuota mensual </h4>
-                    <div className="col-4">
-                        <p>{priceWithPermanenceSelected?.price}</p>
-                    </div>
-                </div>
             </div>
-            <div className="d-flex">
+            <div className="end d-flex">
                 <div className="row col-12">
-                    {user ? <button onClick={handleBooking}>Resérvalo</button> :
+                    {user ? <button className='reserva pt-1 pb-1' onClick={handleBooking}>RESÉRVALO</button> :
                         <div className="d-flex col-12">
-                            <div className="rl d-flex col-6 "><Link className="badge  bg-success" aria-current="page" to="/register">Registrate</Link></div>
-                            <div className="rl d-flex col-6"><Link className="badge  bg-success" aria-current="page" to="/login">Login</Link></div>
+                            <div className="rl d-flex col-6 fs-6"><Link className="badge-1  bg-outline-success text-decoration-none ps-3 pe-3 pb-2 pt-2" aria-current="page" to="/register"><strong>Registrate</strong></Link></div>
+                            <div className="rl d-flex col-6"><Link className="badge-1  bg-outline-success text-decoration-none ps-3 pe-3 pb-2 pt-2" aria-current="page" to="/login"><strong>Login</strong></Link></div>
                         </div>
 
                     }

@@ -51,47 +51,53 @@ function Register() {
 
     return (
         <>
+        <div className="d-flex w-100 mt-1">
+        <h2 className="text-center m-auto"><b>Estas a un paso de ser un lo͝okər!!<br/> Regístrate</b></h2>
+    </div>
             {error && <div className="alert alert-danger col-4 m-auto">{error}</div>}
             <form className="register-form" onSubmit={handleSubmit}>
                 <img src="https://cardive.app/images/register.webp" alt="" className="form-bg" />
 
 
                 <div className="m-auto col-4 mb-4">
-                    <label htmlFor="name" className="form-label d-flex justify-content-center ">Name</label>
+                    <label htmlFor="name" className="form-label d-flex justify-content-center mb-3"><strong>Name</strong></label>
                     <input
                         type="text"
-                        className={`form-control justify-content-center ${error?.name ? "is-invalid" : ""} `}
+                        className={`form-control text-center justify-content-center ${error?.name ? "is-invalid" : ""} `}
                         id="name"
                         value={data.name}
                         onChange={handleChange}
+                        placeholder="Pepe looker Soy"
                     />
                      <div class="invalid-feedback">{ error?.name }</div>
                 </div>
 
                 <div className="m-auto col-4 mb-4">
-                    <label htmlFor="email" className="form-label d-flex justify-content-center">Email</label>
+                    <label htmlFor="email" className="form-label d-flex justify-content-center mb-3"><strong>Email</strong></label>
                     <input
                         type="email"
-                        className={`form-control justify-content-center ${error?.email ? "is-invalid" : ""} `}
+                        className={`form-control text-center justify-content-center ${error?.email ? "is-invalid" : ""} `}
                         id="email"
                         value={data.email}
                         onChange={handleChange}
+                        placeholder="lo͝okər@example.com"
                     />
                 </div>
 
                 <div className="m-auto col-4">
-                    <label htmlFor="password" className="form-label d-flex justify-content-center">Password</label>
+                    <label htmlFor="password" className="form-label d-flex justify-content-center mb-3"><strong>Password</strong></label>
                     <input
                         type="password"
-                        className={`form-control justify-content-center ${error?.password ? "is-invalid" : ""} `}
+                        className={`form-control text-center justify-content-center ${error?.password ? "is-invalid" : ""} `}
                         id="password"
                         value={data.password}
                         onChange={handleChange}
+                        placeholder="********"
                     />
                 </div>
                 <div className="m-auto col-4 mt-2">
                     <div className="d-grid">
-                        <button type="submit" className="mt-5 btn btn-success">Crear cuenta</button>
+                        <button type="submit" className="btn btn-outline-success mt-5">Crear cuenta</button>
                     </div>
                 </div>
             </form>

@@ -11,7 +11,7 @@ function Carousel({ id, images }) {
                 })}
                 
             </div>
-            <div className="carousel-inner">
+            <div className="carousel-inner ms-5">
                 {images.map((image, i) => {
                     const active = i === 0 ? "active" : ""
                     return (

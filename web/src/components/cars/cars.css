@@ -8,7 +8,7 @@ span.card-options-permanence {
     max-width: 600px;
     max-height: 300px;
     margin-bottom: 110px;
-    margin-top: 100px;
+    margin-top: 50px;
     margin-left: 20px;
 }
 
@@ -57,15 +57,16 @@ span.card-options-permanence {
     border-radius: 16px;
 }
 
-.bg transparent{
-    height:1200px;
+.bg-transparent{
+    height:1120px;
     box-shadow: 0 2px 8px rgb(43 54 71 / 30%);
     border-radius: 16px;
+    margin-bottom: 90px;
 }
 
 .options {
     margin-left: 580px;
-    height:800px;
+    height:600px;
 }
 
 input:checked + label div {
@@ -127,9 +128,15 @@ h2 {
     border-radius: 16px;
     margin-left: -30px;
     margin-top: -30px;
-    max-height: 600px;
+    max-height: 550px;
 }
 .btn-prices {
     border-radius: 0.55rem!important;
     box-shadow: 0 2px 8px rgb(43 54 71 / 30%);
+}
+.carousel-control-next {
+    right: -120px;
+}
+.carousel-control-prev {
+    left: -30px;
 }

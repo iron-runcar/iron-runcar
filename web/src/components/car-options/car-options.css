@@ -1,0 +1,49 @@
+.rounded-3 {
+    border-radius: 0.3rem!important;
+    border: 1px solid;
+    border-radius: 0.55rem!important;
+    box-shadow: 0 2px 8px rgb(43 54 71 / 30%);
+}
+.total {
+    align-items: flex-end;
+    display: flex;
+}
+.form-check-1 {
+    display: block;
+    min-height: 1.5rem;
+    margin-bottom: 0.125rem;
+    margin-left: -15px;
+}
+.badge-1 {
+    border: 1px solid;
+    border-radius: 0.55rem!important;
+    box-shadow: 0 2px 8px rgb(43 54 71 / 30%);
+    color: rgba(94, 133, 16, 0.932);
+    border-radius: 16px;
+}
+.badge-1:hover {
+    border: 1px solid;
+    border-radius: 0.55rem!important;
+    box-shadow: 0 2px 8px rgb(43 54 71 / 30%);
+    color: rgb(255, 255, 255);
+    border-radius: 16px;
+    background-color: rgba(94, 133, 16, 0.932);;
+}
+.end {
+    justify-content: space-around;
+}
+.reserva {
+    border: 1px solid;
+    border-radius: 0.55rem!important;
+    box-shadow: 0 2px 8px rgb(43 54 71 / 30%);
+    color: rgba(94, 133, 16, 0.932);
+    border-radius: 16px;
+}
+.reserva:hover {
+    border: 1px solid;
+    border-radius: 0.55rem!important;
+    box-shadow: 0 2px 8px rgb(43 54 71 / 30%);
+    color: rgb(255, 255, 255);
+    border-radius: 16px;
+    background-color: rgba(94, 133, 16, 0.932);;
+}

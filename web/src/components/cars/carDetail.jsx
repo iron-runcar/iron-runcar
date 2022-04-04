@@ -37,12 +37,12 @@ function CarDetail() {
                     <div className="position-absolute ms-5 mt-3 fw-bold fs-4 text-light ">{brand}</div>
 
                     <div className="row">
-                        <div className="col-8">
+                        <div className="col-8 ">
                             <Carousel id="car-detail-carousel" images={image} />
-                            <h5>Información {model}</h5>
-                            <p>Coche de ocasión certificado y verificado por Bipi.
+                            <h4 className="ms-4 mb-4">Información {model}</h4>
+                            <p className="ms-4">Coche de ocasión certificado y verificado por Bipi.
 
-                                Ventajas de suscribirte a un coche de ocasión de Bipi: más económico, más flexibilidad y sin preocupaciones. El mantenimiento, seguro, ITV e impuestos están incluidos. Nuestros coches pasan revisión y se desinfectan antes de la entrega. Estado: verificados y certificados con un kilometraje entre 25,000 - 85,000 según stock y disponibilidad. Recuerda que siempre podrás cambiar de coche más adelante si tus necesidades cambian.
+                                Ventajas de suscribirte a un coche de ocasión de Bipi: más económico, más flexibilidad y sin preocupaciones. El mantenimiento, seguro, ITV e impuestos están incluidos. Nuestros coches pasan revisión y se desinfectan antes de la entrega. Estado: verificados y certificados con un kilometraje entre 0 - 85,000 según stock y disponibilidad. Recuerda que siempre podrás cambiar de coche más adelante si tus necesidades cambian.
 
                                 Combustible: gasolina y/o GLP.
 

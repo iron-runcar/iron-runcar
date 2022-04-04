@@ -48,40 +48,46 @@ function Login() {
 
 
     return (
+
         <>
+        <div className="d-flex w-100 mt-3">
+        <h2 className="text-center m-auto"><b>¡Hello lo͝okər! <br/>Logéate</b></h2>
+    </div>
         {error && <div className="alert alert-danger col-4 m-auto">{error}</div>}
         <form className="register-form" onSubmit={handleSubmit}>
                 <img src="https://cardive.app/images/register.webp" alt="" className="form-bg" />
 
                 <div className="m-auto col-4 mb-4">
-                    <label htmlFor="email" className="form-label d-flex justify-content-center">
-                        Email
+                    <label htmlFor="email" className="form-label d-flex justify-content-center mb-3">
+                        <strong>Email</strong>
                     </label>
                     <input
                         type="email"
-                        className={`form-control justify-content-center ${error?.email ? "is-invalid" : ""} `}
+                        className={`form-control text-center justify-content-center ${error?.email ? "is-invalid" : ""} `}
                         id="email"
                         value={data.email}
                         onChange={handleChange}
+                        placeholder="lo͝okər@example.com"
                     />
                     <div class="invalid-feedback">{ error?.name }</div>
                 </div>
 
                 <div className="m-auto col-4">
-                    <label htmlFor="password" className="form-label d-flex justify-content-center">
-                        Password
+                    <label htmlFor="password" className="form-label d-flex justify-content-center mb-3">
+                        <strong>Password</strong>
                     </label>
                     <input
                         type="password"
-                        className="form-control justify-content-center"
+                        className="form-control justify-content-center text-center"
                         id="password"
                         value={data.password}
                         onChange={handleChange}
+                        placeholder="********"
                     />
                 </div>
                 <div className="m-auto col-4 mt-2">
                     <div className="d-grid">
-                        <button type="submit" className="btn btn-success mt-5">Login</button>
+                        <button type="submit" className="btn btn-outline-success mt-5">Login</button>
                     </div>
                 </div>
             </form>
