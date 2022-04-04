@@ -8,6 +8,7 @@ function Contact() {
 
                 <div className="col-5">
                     <img src="https://cardive.imgix.net/images/leafs-right.png?w=80&fm=webp" alt="" className="image-bg-contact position-absolute" />
+                    <img src="https://cardive.app/_nuxt/img/handdrawn_rounded.2b2f014.svg" alt="hand rounded svg" className="icon-draw-8 position-absolute" />
 
                     <h3 className='mb-5 d-inline-block text-center'>¿Tienes alguna duda? <br />Contáctanos!!!</h3>
                     <ul className='list-unstyled mt-3 ms-3'>

@@ -51,7 +51,10 @@ function Login() {
 
         <>
         <div className="d-flex w-100 mt-3">
+        <img src="https://cardive.app/_nuxt/img/handdrawn_attention.f70222c.svg" alt="hand rounded svg" className="icon-draw-11 position-absolute" />
+
         <h2 className="text-center m-auto"><b>¡Hello lo͝okər! <br/>Logéate</b></h2>
+
     </div>
         {error && <div className="alert alert-danger col-4 m-auto">{error}</div>}
         <form className="register-form" onSubmit={handleSubmit}>

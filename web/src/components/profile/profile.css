@@ -51,19 +51,30 @@ img {
     
     
 }
-.first-row .total:first-child {
-    border-right: 2px solid #c4c4c4;
-    height: 55px;
-    margin-right: 100px;
+.first-row .totales:first-child {
+    border-right: 2px solid rgb(94, 133, 16);;
+    height: 95px;
+    padding:28px;
+
+    
 }
 .qr-img {
     width: 120px;
+    
 }
 .second-row {
-    margin-top: 100px;
+    margin-top: 80px;
     justify-content: space-between;
 
 }
 .first-row {
     justify-content: space-between;
+}
+.totales {
+    margin-top: -27px;
+}
+.icon-draw-10 {
+    left: 500px;
+    top: 1rem;
+    width: 100px;
 }

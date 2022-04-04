@@ -7,7 +7,7 @@ function Faqs() {
         <div className="tittle d-flex justify-content-center fw-bolder m-auto"><b>What the FAQ?</b>
         <img src="https://cardive.imgix.net/images/leafs-right.png?w=80&fm=webp" alt="" className="image-bg-faqs position-absolute" />
         </div>
-        <div className="text d-flex justify-content-center fw-bold fs-3">lo͝okər <br/>sal de dudas!! </div>
+        <div className="text d-flex justify-content-center fs-3">lo͝okər <br/>sal de dudas!! </div>
 
         <div className="accordion" id="accordionPanelsStayOpenExample">
             <div className="accordion-item">

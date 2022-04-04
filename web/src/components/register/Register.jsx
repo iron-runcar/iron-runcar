@@ -52,8 +52,12 @@ function Register() {
     return (
         <>
         <div className="d-flex w-100 mt-1">
+
         <h2 className="text-center m-auto"><b>Estas a un paso de ser un lo͝okər!!<br/> Regístrate</b></h2>
+
     </div>
+    <img src="https://cardive.app/_nuxt/img/handdrawn_attention.f70222c.svg" alt="hand rounded svg" className="icon-draw-12 position-absolute" />
+
             {error && <div className="alert alert-danger col-4 m-auto">{error}</div>}
             <form className="register-form" onSubmit={handleSubmit}>
                 <img src="https://cardive.app/images/register.webp" alt="" className="form-bg" />

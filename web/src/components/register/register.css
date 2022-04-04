@@ -15,8 +15,8 @@
   position: absolute;
   max-width: 200px;
   width: 100%;
-  bottom: -150px;
-  right: 120px;
+  top: 150px;
+  right: 100px;
   z-index: -1;
 }
 
@@ -36,4 +36,14 @@
 .btn-outline-success:hover {
   box-shadow: 0 2px 8px rgb(43 54 71 / 30%);
   
+}
+.icon-draw-11 {
+  width: 80px;
+  left: 878px;
+  transform: rotate(35deg);
+}
+.icon-draw-12 {
+  width: 80px;
+  left: 609px;
+  transform: rotate(159deg);
 }
