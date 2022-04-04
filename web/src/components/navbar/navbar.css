@@ -23,3 +23,36 @@
      -moz-transition-duration: 50ms;
   }
 
+  .btn-logout:hover {
+    color: red;
+  }
+  .btn-logout {
+      border: none;
+      width: 140px;
+  }
+  .btn-user {
+    border-radius: 16px;
+    
+  }
+
+  .btn-user:hover {
+    background-color: rgb(94, 133, 16);
+  }
+
+  .icon-user {
+    color: rgb(94, 133, 16);
+    -webkit-transform: scale(1,1); 
+    -webkit-transition-timing-function: ease-out;
+    -webkit-transition-duration: 100ms;
+    -moz-transition: scale(1,1);
+    -moz-transition-timing-function: ease-out;
+    -moz-transition-duration: 100ms;
+  }
+  .icon-user:hover {
+    -webkit-transform: scale(1.12,1.12); 
+    -webkit-transition-timing-function: ease-out;
+    -webkit-transition-duration: 50ms;
+    -moz-transition: scale(1.12,1.12);
+    -moz-transition-timing-function: ease-out;
+    -moz-transition-duration: 50ms;
+ }

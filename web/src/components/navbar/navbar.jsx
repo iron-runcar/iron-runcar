@@ -1,5 +1,5 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import './navbar.css';
 import AuthContext from '../../contexts/auth-context';
 
@@ -24,9 +24,9 @@ function NavBar() {
           </ul>
           <ul className="navbar-nav">
             <li className="nav-item">
-              <NavLink className="nav-link active" aria-current="page" to="/contact">¿Hablamos?</NavLink>
+              <NavLink className="nav-link active me-1" aria-current="page" to="/contact">¿Hablamos?</NavLink>
             </li>
-            <li className="nav-item d-flex align-items-baseline">
+            {/* <li className="nav-item d-flex align-items-baseline">
               {user ? (
                 <>
                   <NavLink className="nav-link btn rounded-pill btn-outline-success" to="/profile">{user.email.slice(0, 3)}</NavLink>
@@ -46,10 +46,48 @@ function NavBar() {
               )
               }
 
-            </li>
-
-
+            </li> */}
+            <li className="nav-item dropdown">
+              {user ? (
+                <>
+                <NavLink className="nav-link dropdown-toggle" to="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <button className="btn-user btn-outline-success text-center">{user.name.slice(0, 8)}</button></NavLink>
+                 <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
+                 <li><Link className="dropdown-item" to="/login">Login</Link></li>
+                 <li><Link className="dropdown-item" to="/profile">Mi suscripción</Link></li>
+                 <li><hr/></li>
+                 <li><button className="btn-logout mt-2 d-flex ms-2 align-items: center;
+                         justify-content: space-around" onClick={handleLogout}>o͝o   Logout</button></li>
+                   {/* <Link className="dropdown-item" to="/">onClick={handleLogout}Logout</Link></li> */}
+               </ul>
+               </>
+              ) : (<>
+                <NavLink className="nav-link dropdown-toggle" to="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                 <i className="icon-user me-1 mb-3 fa-lg fa fa-user-circle-o"></i>Looker</NavLink>
+                  <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><Link className="dropdown-item" to="/login">Login</Link></li>
+                  <li><Link className="dropdown-item" to="/profile">Mi suscripción</Link></li>
+                  <li><Link className="dropdown-item" to="/register">Registrate</Link></li>
+                  <li><hr/></li>
+                  <li><button className="btn-logout mt-2 d-flex ms-2 align-items: center;
+                          justify-content: space-around" onClick={handleLogout}>o͝o   Logout</button></li>
+                    {/* <Link className="dropdown-item" to="/">onClick={handleLogout}Logout</Link></li> */}
+                </ul></>
+              )
+              }
+         
+          {/* <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><Link className="dropdown-item" to="/login">Login</Link></li>
+            <li><Link className="dropdown-item" to="/profile">Mi suscripción</Link></li>
+            <li><Link className="dropdown-item" to="/register">Registrate</Link></li>
+            <li><hr/></li>
+            <li><button className="btn-logout mt-2 d-flex ms-2 align-items: center;
+                    justify-content: space-around" onClick={handleLogout}>o͝o   Logout</button></li>
+               <Link className="dropdown-item" to="/">onClick={handleLogout}Logout</Link></li> 
+          </ul> */}
+        </li>
           </ul>
+          
         </div>
       </div>
     </nav>
