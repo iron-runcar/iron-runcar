@@ -56,3 +56,6 @@
     -moz-transition-timing-function: ease-out;
     -moz-transition-duration: 50ms;
  }
+ .lookerbrand {
+    width: 75px;
+ }

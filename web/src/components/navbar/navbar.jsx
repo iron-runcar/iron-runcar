@@ -2,6 +2,7 @@ import React from "react";
 import { Link, NavLink } from "react-router-dom";
 import './navbar.css';
 import AuthContext from '../../contexts/auth-context';
+import lookerbrand from '../images/lookerbrand.png'
 
 function NavBar() {
   const { user, handleLogout } = React.useContext(AuthContext);
@@ -9,7 +10,7 @@ function NavBar() {
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-light">
       <div className="container">
-        <NavLink className="navbar-brand my-auto" to="/">lo͝okər</NavLink>
+        <NavLink className="navbar-brand my-auto" to="/"><img src={lookerbrand} alt="home_img" className="lookerbrand m-auto" /></NavLink>
         <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main-nav" aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
           <span className="navbar-toggler-icon"></span>
         </button>
