@@ -20,10 +20,10 @@ function CarItem({ brand, prices, image, model, id }) {
     return (
 
         <div className="col-md-3">
-            <div className="card m-2">
+            <div className="card m-2 mb-4">
                 <div className="container d-flex me-auto justify-content-between card-image">
-                    <div><span className="card-notify-badge  me-auto fw-bolder">{brand}</span></div>
-                    <div className='desde'><span className="card-notify-price me-auto">Desde <b>{price}€</b></span></div>
+                    <div><span className="card-notify-badge  me-auto fw-bold">{brand}</span></div>
+                    <div className='desde'><span className="card-notify-price m-auto d-flex flex-direction-column"><b><sup>Desde</sup><br /> {price}€</b></span></div>
                     </div>
                     <Link className='detail d-flex' to={`/cars/${id}`}>
                     <img className="img-fluid" src={image[0]} alt={brand} />

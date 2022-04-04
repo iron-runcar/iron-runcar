@@ -21,8 +21,6 @@ function CarOptions({ model, year, fuelType, horsePower, transmission, prices, i
     }
 
 
-
-
     return (
 
         <div className="container">
@@ -33,7 +31,7 @@ function CarOptions({ model, year, fuelType, horsePower, transmission, prices, i
                 <h5 className="">{model}</h5>
                 <div className="d-flex justify-content-between">
                     <span><i className='fa fa-calendar'></i> {year}</span>
-                    <span><i className='fa fa-gas'></i> {fuelType}</span>
+                    <span><i className='fa fa-star-half-o'></i> {fuelType}</span>
                     <span><i className='fa fa-gear'></i> {transmission}</span>
                     <span><i className='fa fa-tachometer'></i> {horsePower}</span>
                 </div>
@@ -50,7 +48,7 @@ function CarOptions({ model, year, fuelType, horsePower, transmission, prices, i
                                     htmlFor={`permanence-${i}`}
                                 >
                                     <small>{priceWithPermanence.permanence} meses</small>
-                                    <div className="border rounded p-3">{priceWithPermanence.price} €</div>
+                                    <div className="btn-prices border rounded p-2">{priceWithPermanence.price} €</div>
 
 
                                 </label>

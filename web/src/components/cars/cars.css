@@ -69,7 +69,9 @@ span.card-options-permanence {
 }
 
 input:checked + label div {
-    background: red;
+    background: rgba(94, 133, 16, 0.932);
+    color:seashell;
+    
 }
 
 .leaves {
@@ -84,6 +86,7 @@ input:checked + label div {
 .card {
     box-shadow: 0 2px 8px rgb(43 54 71 / 30%);
     border-radius: 16px;
+    height: 230px;
 }
 
 .card:hover {
@@ -125,4 +128,8 @@ h2 {
     margin-left: -30px;
     margin-top: -30px;
     max-height: 600px;
+}
+.btn-prices {
+    border-radius: 0.55rem!important;
+    box-shadow: 0 2px 8px rgb(43 54 71 / 30%);
 }
