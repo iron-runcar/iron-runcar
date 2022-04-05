@@ -64,7 +64,7 @@ function NavBar() {
                </>
               ) : (<>
                 <NavLink className="nav-link dropdown-toggle" to="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                 <i className="icon-user me-1 mb-3 fa-lg fa fa-user-circle-o"></i>Looker</NavLink>
+                 <i className="icon-user me-1 mb-3 fa-lg fa fa-user-circle-o"></i>lo͝okər</NavLink>
                   <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
                   <li><Link className="dropdown-item" to="/login">Login</Link></li>
                   <li><Link className="dropdown-item" to="/profile">Mi suscripción</Link></li>
